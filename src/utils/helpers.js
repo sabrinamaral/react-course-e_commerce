@@ -5,4 +5,17 @@ export const formatPrice = (number) => {
   }).format(number / 100);
 };
 
-export const getUniqueValues = () => {};
+export const getUniqueValues = (data, type) => {
+  let unique = data.map((item) => item[type]);
+  if (type === "colors") {
+    unique = unique.flat();
+  }
+  return ["all", ...new Set(unique)];
+};
+
+const array = ["a", "d", "f", "b", "c"];
+const newArray = array.sort((a, b) => {
+  return a.localeCompare(b);
+});
+
+console.log(newArray);
