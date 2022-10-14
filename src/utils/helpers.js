@@ -12,10 +12,3 @@ export const getUniqueValues = (data, type) => {
   }
   return ["all", ...new Set(unique)];
 };
-
-const array = ["a", "d", "f", "b", "c"];
-const newArray = array.sort((a, b) => {
-  return a.localeCompare(b);
-});
-
-console.log(newArray);
