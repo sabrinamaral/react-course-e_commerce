@@ -24,11 +24,12 @@ function App() {
         <Route path="products" element={<Products />} />
         <Route path="products/:id" element={<SingleProduct />} />
         <Route
-          path="checkout"
+          exact
+          path="/checkout"
           element={
-            //<PrivateRoute>
-            <Checkout />
-            //</PrivateRoute>
+            <PrivateRoute>
+              <Checkout />
+            </PrivateRoute>
           }
         />
         <Route path="*" element={<Error />} />
