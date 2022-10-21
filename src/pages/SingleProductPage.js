@@ -28,6 +28,7 @@ const SingleProductPage = () => {
   const navigate = useNavigate();
   useEffect(() => {
     fetchSingleProduct(`${url}${id}`);
+    // eslint-disable-next-line
   }, [id]);
 
   // if there is an error, go back to home in 3 seconds
@@ -37,6 +38,7 @@ const SingleProductPage = () => {
         navigate("/");
       }, 3000);
     }
+    // eslint-disable-next-line
   }, [error]);
 
   if (loading) {
